@@ -39,8 +39,8 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_plugindir} $RPM_BUILD_ROOT%{_sysconfdir}
 
 install *.php $RPM_BUILD_ROOT%{_plugindir}
-mv config.php.sample $RPM_BUILD_ROOT%{_sysconfdir}/secure_login_config.php
-ln -s %{_sysconfdir}/secure_login_config.php $RPM_BUILD_ROOT%{_plugindir}/config.php
+mv config.php.sample $RPM_BUILD_ROOT%{_sysconfdir}/%{_plugin}_config.php
+ln -s %{_sysconfdir}/%{_plugin}_config.php $RPM_BUILD_ROOT%{_plugindir}/config.php
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -48,6 +48,6 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc INSTALL README
-%attr(640,root,http) %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/secure_login_config.php
+%attr(640,root,http) %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/%{_plugin}_config.php
 %dir %{_plugindir}
 %{_plugindir}/*.php

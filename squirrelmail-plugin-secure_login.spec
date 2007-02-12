@@ -1,7 +1,7 @@
 %define		_plugin	secure_login
 %define		mversion	1.2.8
 Summary:	Plugin to turn on SSL during login
-Summary(pl.UTF-8):   Wtyczka włączająca SSL na czas logowania
+Summary(pl.UTF-8):	Wtyczka włączająca SSL na czas logowania
 Name:		squirrelmail-plugin-%{_plugin}
 Version:	1.2
 Release:	1

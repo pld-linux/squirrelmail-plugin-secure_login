@@ -4,14 +4,14 @@ Summary:	Plugin to turn on SSL during login
 Summary(pl.UTF-8):	Wtyczka włączająca SSL na czas logowania
 Name:		squirrelmail-plugin-%{_plugin}
 Version:	1.2
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/Mail
 Source0:	http://www.squirrelmail.org/plugins/%{_plugin}-%{version}-%{mversion}.tar.gz
 # Source0-md5:	73d2c111579e2fad17c289f62e0be855
 URL:		http://www.squirrelmail.org/plugin_view.php?id=61
 Requires:	squirrelmail >= 1.4.6-1
-Requires:	squirrelmail-compatibility-2.0.4
+Requires:	squirrelmail-compatibility >= 2.0.4
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
